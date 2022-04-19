@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -76,8 +76,24 @@ const NavBtn = styled.div`
 `;
 
 const HeaderNav = () => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <Nav>
+    <Nav className={navbar ? "navbar active" : "navbar"}>
       <Logo to="/">Commenda</Logo>
       <MenuBars />
       <NavMenu>

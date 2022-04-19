@@ -4,7 +4,7 @@ import Header from "./Sections/Header";
 import About from "./Sections/About";
 import Features from "./Sections/Features";
 import Blog from "./Sections/Blog";
-import Form from "./Sections/Form";
+import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <About />
       <Features />
       <Blog />
-      <Form />
+      <Contact />
       <Footer />
     </>
   );

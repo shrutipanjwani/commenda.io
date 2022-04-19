@@ -100,9 +100,9 @@ function Header() {
           </HeroContentInside>
           <HeroContentInside>
             <p>
-              You need money to build your company. But once you've convinced an
-              investor to believe in your vision, you still have to make sure
-              your company is set up to take their investment.
+              Trusted by VC funds and angel investors in the US, Commenda
+              ensures that your company is set up to quickly take capital from
+              all over the world.
             </p>
           </HeroContentInside>
 

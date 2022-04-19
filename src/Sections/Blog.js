@@ -1,19 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-const BlogSection = styled.section`
-  height: 700px;
+const Section = styled.section`
+  height: 100vh;
   max-height: 1100px;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10% auto;
 `;
 
-const BlogWrapper = styled.div`
-  margin: 40px;
+const Wrapper = styled.div`
+  margin: 20px;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -21,9 +22,9 @@ const BlogWrapper = styled.div`
 
 const Blog = () => {
   return (
-    <BlogSection id="blog">
-      <BlogWrapper>Blog</BlogWrapper>
-    </BlogSection>
+    <Section id="blog">
+      <Wrapper>Blog</Wrapper>
+    </Section>
   );
 };
 
