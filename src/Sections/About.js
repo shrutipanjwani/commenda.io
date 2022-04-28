@@ -37,6 +37,10 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const ContentInside = styled.div`
@@ -94,6 +98,22 @@ const Content = styled.div`
   }
   ${ContentInside}:nth-child(3) {
     grid-area: 3 / 1 / 4 / 2;
+  }
+
+  @media screen and (max-width: 768px) {
+    ${ContentInside}:nth-child(1) {
+      h1 {
+        font-size: 30px;
+        width: 100%;
+      }
+    }
+    ${ContentInside}:nth-child(2) {
+      grid-template-columns: 1fr;
+
+      p {
+        margin-top: 1rem;
+      }
+    }
   }
 `;
 

@@ -18,6 +18,14 @@ const SectionBg = styled.div`
     rgba(114, 100, 182, 0)
   );
   clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+
+  @media screen and (max-width: 990px) {
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @media screen and (max-width: 600px) {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  }
 `;
 
 const Wrapper = styled.div`
@@ -30,6 +38,10 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const ContentInside = styled.div`
@@ -49,6 +61,10 @@ const ContentInside = styled.div`
     color: #7264b6;
     font-weight: bold;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 150%;
+  }
 `;
 
 const Content = styled.div`
@@ -66,6 +82,14 @@ const Content = styled.div`
       font-size: 34px;
       width: 650px;
       position: relative;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 500px) {
+        font-size: 30px;
+      }
     }
     h1 span {
       position: relative;
@@ -113,6 +137,11 @@ const Box = styled.div`
     rgba(114, 100, 182, 0.4)
   );
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @media screen and (max-width: 500px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 const Boxes = styled.div`
@@ -135,6 +164,24 @@ const Boxes = styled.div`
   ${Box}:nth-child(3) {
     grid-area: 3 / 1 / 4 / 2;
     margin-top: -120px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin-left: 2rem;
+
+    ${Box}:nth-child(2) {
+      margin-top: -50px;
+      margin-left: 10px;
+    }
+
+    ${Box}:nth-child(3) {
+      margin-top: -90px;
+    }
   }
 `;
 
@@ -184,6 +231,16 @@ const ContentTwo = styled.div`
         #dbd7ee,
         #ffffff
       );
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+
+    ${ContentInsideTwo}:nth-child(1) {
+      h1 {
+        font-size: 30px;
+      }
     }
   }
 `;

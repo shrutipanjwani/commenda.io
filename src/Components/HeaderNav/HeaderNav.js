@@ -75,7 +75,7 @@ const NavBtn = styled.div`
   }
 `;
 
-const HeaderNav = () => {
+const HeaderNav = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -95,7 +95,7 @@ const HeaderNav = () => {
   return (
     <Nav className={navbar ? "navbar active" : "navbar"}>
       <Logo to="/">Commenda</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks smooth to={item.link} key={index}>

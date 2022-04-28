@@ -18,6 +18,10 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const ContentInside = styled.div`
@@ -68,6 +72,10 @@ const Content = styled.div`
   ${ContentInside}:nth-child(2) {
     grid-area: 2 / 1 / 3 / 2;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 
 const FormBg = styled.div`
@@ -95,6 +103,14 @@ const FormBg = styled.div`
     border-radius: 50%;
     font-size: 25px;
     padding: 10px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 10%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
 `;
 

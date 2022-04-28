@@ -20,6 +20,11 @@ const HeroWrapper = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: 100px;
+  }
 `;
 
 const HeroContentInside = styled.div`
@@ -69,6 +74,27 @@ const HeroContent = styled.div`
   }
   ${HeroContentInside}:nth-child(3) {
     grid-area: 3 / 1 / 4 / 2;
+  }
+
+  @media screen and (max-width: 1024px) {
+    ${HeroContentInside}:nth-child(1) {
+      h1 {
+        font-size: 42px;
+        width: 90vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    ${HeroContentInside}:nth-child(1) {
+      h1 {
+        font-size: 38px;
+        width: 75vw;
+      }
+      h1 span::before {
+        height: 20px;
+      }
+    }
   }
 `;
 
